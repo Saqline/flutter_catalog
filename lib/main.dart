@@ -1,7 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login.dart';
 import 'package:flutter_catalog/utills/routes.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,12 +19,11 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       // home: HomePage(),
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
-      //initialRoute: '/home',
+      theme: Mytheme.lightTheme(context),
+      darkTheme: Mytheme.darkTheme(context),
+      initialRoute: '/home',
       routes: {
         '/':(context) => Login(),
         MyRoutes.homeRoute:(context) => HomePage(),
