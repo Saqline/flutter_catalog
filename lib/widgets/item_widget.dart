@@ -15,11 +15,12 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.all(16),
-      color: Color.fromARGB(221, 170, 10, 10),
+      color: Color.fromARGB(221, 66, 10, 170),
       child: ListTile(
         onTap: () {
           print('${item.name} pressed');
         },
+        leading: Image.network(item.image),
         title: Text(item.name),
         //leading: ,
         subtitle: Text(item.desc),
